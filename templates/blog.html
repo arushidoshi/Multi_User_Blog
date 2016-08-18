@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for p in post %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <legend><h4>Submitted by: {{p.author.name}}</h4></legend>
+                <h5>{{p.created.strftime("%b %d, %Y")}}</h5>
+                <div class="jumbotron">
+                    <h3>{{p.subject}}</h3>
+                    <div class="lead">
+                        {{p.content.replace('\n', '<br>')| safe}}
+                    </div>
+                    <p><a class="btn btn-info" href="/blog/{{ p.key.id() }}">Learn more</a>
+                    {% if user %}
+                    {% if p.author.name == user.name %}
+                    <a class="btn btn-warning" href="/edit?post={{ p.key.id() }}"> Edit</a>
+                    <a class="btn btn-danger" href="/delete?post={{ p.key.id() }}"> Delete</a></p>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
