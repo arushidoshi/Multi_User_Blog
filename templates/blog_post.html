@@ -10,9 +10,9 @@
                 <cite>{{post.created.strftime("%b %d, %Y")}}</cite></h4></legend>
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{post.subject}}</h3>
+                    <h3 class="panel-title">{{post.subject|e}}</h3>
                 </div>
-                <div class="panel-body">{{post.content.replace('\n', '<br>')}}</div>
+                <div class="panel-body">{{post.content.replace('\n', '<br>') | safe }}</div>
             </div>
             <!-- comments section-->
             <legend class="text-center"><h4>Comments</h4></legend>
@@ -22,7 +22,7 @@
                     <h3 class="panel-title">{{comment.author.name}} commented:</h3>
                 </div>
                 <div class="panel-body">
-                    {{comment.content}}
+                    {{comment.content|e}}
                 </div>
                 {% if comment.author.name == user.name %}
                 <div>

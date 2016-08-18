@@ -5,9 +5,9 @@
         <legend class="text-center"><h4>This post was submitted by:  {{post.author.name}}  on:  {{post.created.strftime("%b %d, %Y")}}</h4></legend>
         <div class="panel panel-danger">
             <div class="panel-heading">
-                <h3 class="panel-title">{{post.subject}}</h3>
+                <h3 class="panel-title">{{post.subject|e}}</h3>
             </div>
-            <div class="panel-body">{{post.content.replace('\n', '<br>')}}</div>
+            <div class="panel-body">{{post.content.replace('\n', '<br>') | safe }}</div>
         </div>
         <br>
         <form class="form-horizontal" method="post">

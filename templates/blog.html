@@ -10,7 +10,7 @@
                 <legend><h4>Submitted by: {{p.author.name}}</h4></legend>
                 <h5>{{p.created.strftime("%b %d, %Y")}}</h5>
                 <div class="jumbotron">
-                    <h3>{{p.subject}}</h3>
+                    <h3>{{p.subject|e}}</h3>
                     <div class="lead">
                         {{p.content.replace('\n', '<br>')| safe}}
                     </div>
