@@ -15,7 +15,9 @@ submitted by [Arushi Doshi](https://github.com/arushidoshi), for the purpose of 
 * css folder
  * bootstrap.css
  * bootstrap.min.css
-* myapp.py -- _python program that manages everything_
+* myapp.py -- _python program that contains handlers_
+* blog.py -- _python program that contains blog models_
+* users.py -- _python program that contains user model_
 * app.yaml -- _contains information about our app_
 * index.yaml -- _contains necessary information for database management_
 
