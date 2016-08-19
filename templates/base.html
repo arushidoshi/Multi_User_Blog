@@ -16,7 +16,7 @@
 
     <ul class="nav navbar-nav">
       <li><a href="/blog">Blog</a></li>
-      <li><a href="/newpost">Write a Post</a>
+      <li><a href="/newpost">Write a Post</a></li>
     </ul>
       {% if user %}
     <ul class="nav navbar-nav navbar-right">
@@ -24,15 +24,16 @@
       <li><a href="/logout">LOGOUT</a></li>
     </ul>
       {% else %}
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/signup">SignUp</a></li>
-        <li><a href="/login">Login</a></li>
-      </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/signup">SignUp</a></li>
+      <li><a href="/login">Login</a></li>
+    </ul>
       {% endif %}
-    </div>
   </div>
 </nav>
-<br>
+{% if user %}
+<h2 class="text-center">Welcome, {{user.name}}!</h2>
+{% endif %}
 <!-- Content from other pages-->
 {% block content %}
 {% endblock %}

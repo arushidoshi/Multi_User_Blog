@@ -34,6 +34,7 @@
             <br>
             {% endfor %}
             <!-- add new comment section -->
+            {%if user %}
             {% if user.name %}
                 <form class="form-horizontal" method=post>
                     <fieldset>
@@ -77,6 +78,7 @@
                 {% endif %}
             {% endif %}
             </ul>
+            {% endif %}
         </div>
         <div class="col-md-1">
         </div>
