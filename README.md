@@ -37,7 +37,7 @@ submitted by [Arushi Doshi](https://github.com/arushidoshi), for the purpose of 
 5. Add path to the GoogleAppEngine folder, by typing this command: `export PATH=$PATH:/path_to_folder/google_appengine` where path_to_folder is a path on your computer.
 6. Now deploy the application on your localhost:8080 by using the command `dev_appserver.py .`
 
-##### Live version available at: [multiuserblogbyarushi.appspot.com](http://multiuserblogbyarushi.appspot.com/)
+##### Live version available at: [mublogbyarushi.appspot.com](http://mublogbyarushi.appspot.com/)
 
 # License
 The content of this repository is licensed under [MIT License](https://opensource.org/licenses/MIT)
